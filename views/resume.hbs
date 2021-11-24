@@ -41,58 +41,85 @@
   <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
   <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
+{{>header}}<!-- End Header -->
 
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </div>
 
-      <nav class="nav-menu">
-        <ul>
-          <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="/about.html"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="/resume.html"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="/portfolio.html"><i class="bx bx-book-content"></i> Portfolio</a></li>
-          <li><a href="/services.html"><i class="bx bx-server"></i> Services</a></li>
-
-        </ul>
-      </nav><!-- .nav-menu -->
-      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Alex Smith</h1>
-      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
-    </div>
-  </section><!-- End Hero -->
 
   <main id="main">
 
    
 
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p style="text-align: justify">{{text_resume_1}}</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>{{nombre}} {{apellido}}</h4>
+              <p><em>{{sumary}}</em></p>
+              <ul>
+                <li>{{direccion}}</li>
+                <li>{{tel}}</li>
+                <li>{{email}}</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>{{carrera}}</h4>
+              <h5>{{time_lic}}</h5>
+              <p><em>{{escuela_lic}}</em></p>
+              <p>{{texto_lic}}</p>
+            </div>
+            <div class="resume-item">
+              <h4>{{carrera_bach}}</h4>
+              <h5>{{time_bach}}</h5>
+              <p><em>{{escuela_bach}}</em></p>
+              <p>{{texto_bach}}</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>{{exp_gen}}</h4>
+              <h5>{{time_gen}}</h5>
+              <p><em>{{lugar_ss}}</em></p>
+              <ul>
+                <li>{{exp_gen_1}}</li>
+                <li>{{exp_gen_2}} </li>
+                <li>{{exp_gen_3}}</li>
+                <li>{{exp_gen_4}}</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>{{servicio}}</h4>
+              <h5>{{time_ss}}</h5>
+              <p><em>{{lugar_ss}}</em></p>
+              <ul>
+                <li>{{exp_ss_1}}</li>
+                <li>{{exp_ss_2}}</li>
+                <li>{{exp_ss_3}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      
-    </div>
+  {{>footer}}
   </footer><!-- End  Footer -->
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
